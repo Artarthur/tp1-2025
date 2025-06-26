@@ -1,0 +1,22 @@
+<script>
+    array = []
+for(i = 0; i<9;i++){
+    array[i] = Math.random()
+}
+array.sort(comparar)
+for(i = 0; i<9;i++){
+    alert(array[i])
+}
+function comparar(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b ) {
+    return 1;
+  }
+  // a deve ser igual a b
+  return 0;
+}
+
+
+</script>
