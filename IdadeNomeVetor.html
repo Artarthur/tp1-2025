@@ -1,0 +1,24 @@
+<script>
+nome = []
+idade = []
+
+for(i=0;i<7;i++){
+    nome.push(prompt('digite o nome de 7 pessoas'))
+}
+for(i=0;i<7; i++){
+    idade.push(parseInt(prompt('digite a idade dessas pessoas agora')))
+}
+for(i=0;i<7; i++){
+
+
+if(idade[i]<16 ){
+    alert(nome[i]+' Você não pode votar')
+}
+else if (idade[i] < 18 || idade[i] >70 ){
+    alert(nome[i]+' seu voto e opcional')
+}
+else if (idade[i] >= 18 && idade[i] < 70){
+    alert(nome[i]+' Você precisa votar')
+}
+}
+</script>
