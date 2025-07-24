@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra</title>
+    <style>
+ body {
+  background-color: white;
+
+
+ }
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+         .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type= "button"] {
+         padding: 10px 20px;
+         font-size: 16px;
+         margin-top: 10px;
+        }
+        .resultado {
+         text-align: center;
+        }
+        input [type="number"] {
+         margin: 10px;
+         padding: 8px;
+         font-size: 16px;
+         width: 150px;
+        }
+
+ </style>
+</head>
+<body >
+ <h1> <i>Calculadora de regra de três</i></h1> 
+ <div class="resultado">
+ <input type="number" id="a" >  
+ <input type="number" id="b" > <br>
+ <input type="number" id="c"> </div>
+ 
+ <div class="container">
+
+ <input type="button" value="calculo x " onclick= "abcx()" >
+ </div>
+ 
+ <h1 id= "resultado">  </h1>
+ 
+ <script>
+    function abcx(){
+      a = document.getElementById("a").value;
+      b=  document.getElementById("b").value;
+      c = document.getElementById("c").value;
+          x = (b*c)/a
+          document.getElementById('resultado').innerHTML= x
+    }
+    
+ </script>
+</body>
+</html>
