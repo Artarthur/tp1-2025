@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar tamanho da fonte</title>
+</head>
+<style>
+ h1{
+    text-align: center;
+ }
+ 
+</style>
+<body>
+    <h1> Tamanho fonte</h1>
+    
+    <input type="button" value="Clique aqui para aumentar o tamanho da fonte" id="aumentar" onclick=aumentar()><br>
+    <input type="button" value="clique aqui para diminuir o tamanho da fonte"id="diminuir"onclick=diminuir()><br>
+    <input type="text" id="chamada" ><br>
+    <input type="button" value="escrever" onclick=escreva()>
+    <p id="resultado"> </p>
+</body>
+<script>
+    const resultado = document.getElementById('resultado')
+    
+    function aumentar(){
+        let tamanhoAtual = parseFloat(window.getComputedStyle(resultado).fontSize);
+        let novoTamanho = tamanhoAtual + 4;
+        resultado.style.fontSize = novoTamanho + "px";
+    }
+    function diminuir(){
+        let tamanhoAtual = parseFloat(window.getComputedStyle(resultado).fontSize);
+        let novoTamanho = tamanhoAtual - 4;
+        resultado.style.fontSize = novoTamanho + "px";
+    }
+    function escreva(){
+        const resultado = document.getElementById("resultado");
+        const frase = document.getElementById('chamada').value;
+        resultado.innerHTML = frase;
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 50;
+    text-shadow: 0px 0px 10px;
+}
+</style>
+<body>
+    <h1> formulario </h1>
+    <div>
+        <label for="nome"> escreva uma frase:</label> <br>
+        <input type="text" id="frase"> <br>
+        <input type="button" value=" clique aqui para mostrar sua mensagem" onclick=mensagem()>
+        <p id="mensagem">Vai aparecer aqui</p>
+    </div>
+    <script>
+        function mensagem(){
+            console.log("chamou");
+            var mensagem = document.getElementById('mensagem')
+            var frase = document.getElementById('frase').value
+            mensagem.innerHTML = frase;
+        }
+    </script>
+</body>
+</html>
