@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        color: black;
+        text-shadow: 0px 0px 10px;
+    }
+    
+</style>
+<body>
+    <h1> troca de imagem</h1>
+    <input type="button" value="Trocar imagem" onclick="trocaImagem()">
+    <img id="imagem" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5iCqhx8GABc3dx9SR3PBAKvsyKfve7fFKW0Qvuynl-oSdnna9tvJqt0r4OYMn0XyWZq9NZVK6HxUuT6DJz2WyDycl5mJd7M13G0ykCcTIdfYs1GouEmGXjlylUmt_61EP2hEoQzOenUQd/s1600/Superman.jpg" alt=" Superman">
+</body>
+<script>
+    let mostrarImagem = true
+    function trocaImagem() {
+       const imagem = document.getElementById("imagem");
+       if (mostrarImagem){
+        imagem.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5iCqhx8GABc3dx9SR3PBAKvsyKfve7fFKW0Qvuynl-oSdnna9tvJqt0r4OYMn0XyWZq9NZVK6HxUuT6DJz2WyDycl5mJd7M13G0ykCcTIdfYs1GouEmGXjlylUmt_61EP2hEoQzOenUQd/s1600/Superman.jpg";
+        imagem.alt = "Superman";
+       }
+        else {
+        imagem.src = "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/batman-calcada-da-fama.png?w=1200&h=900&crop=0";
+        imagem.alt = "Batman";
+       }
+       mostrarImagem = !mostrarImagem;
+    }
+</script>
+</html>
