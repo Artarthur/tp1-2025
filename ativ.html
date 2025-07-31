@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 31/07 monitoria</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+ h1 {
+    text-align: center;
+    text-shadow: 0px 0px 10px;
+ }
+ .destaque {
+ color: black;
+ }
+ #oculto{
+    display: none;
+ }
+ .caixa{
+    background-color:aqua;
+    width: fit-content;
+    margin: 5px;
+ }
+</style>
+<body>
+    <h1 id="titulo"> Arthur</h1>
+    <button id="Balterart" onclick="trocart('titulo')">trocar titulo</button>
+    <h1> trocar cor</h1>
+  <p class="destaque">esse texto troca de cor para Azul</p> 
+  <input type="button" value="trocar cor" id="Tcor" onclick="trocarC()"> 
+   <h1> multiplos elementos</h1> 
+   <h2>trocar </h2> 
+  <ul>
+        <li> bu</li>
+        <li>be</li>
+        <li>ba</li>
+    </ul>
+    <input type="button" id="btn" value="trocar elementos" onclick="muito()">
+    <h1> oculto</h1>
+    <p id="oculto">você encontrou o texto oculto parabens</p>
+    <input type="button" value="aperte" id="tabeleza" onclick="descobrir()">
+    <h1> atualização</h1>
+    <input type="text" id="escrever"><br>
+    <input type="button" id="aparecer" value="mostrar" onclick="resultado()">
+    <p id="pronto">  </p>
+    <h1>contar elementos</h1>
+    <div class="caixa">caixa</div>
+    <div class="caixa">caixa</div>
+    <div class="caixa">caixa</div>
+    <div class="caixa">caixa</div>
+    <div class="caixa">caixa</div>
+    <input type="button" id="contar" value="contar caixas" onclick="numerar()">
+    <p id="guardar"></p>
+    <h1>troca imagem</h1>
+    <img src="TRex.webp" alt=" T Rex" id="imgtroca">
+    <input type="button" value="trocar imagem" onclick="trocarI()">
+</body>
+<script>
+        function trocarC() {
+        const cor = document.querySelector(".destaque")
+        cor.style.color = "blue"
+        }
+        function trocart (elementoid){
+            document.getElementById(elementoid).innerText = " ola mundo"
+        }
+        function muito () {
+        const  elemento = document.querySelectorAll("li")
+        elemento.forEach(li => {
+            li.innerText = "trocado"
+        })
+
+        }
+        function descobrir(){
+           const escondido = document.getElementById("oculto")
+           escondido.style.display = "block"
+        }
+        function resultado (){
+            const elem = document.getElementById("escrever").value
+            const davi = document.getElementById("pronto")
+            davi.innerText = elem
+        }
+        function numerar (){
+            const lista = document.querySelectorAll(".caixa")
+            document.getElementById("guardar").innerText = "existem "+ lista.length+" caixas"
+
+        }
+        function trocarI(){
+            const imagem = document.getElementById("imgtroca");
+            imagem.src = "Espinossauro.webp"
+        }
+
+</script>
+</html>
