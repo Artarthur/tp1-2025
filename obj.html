@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmetica</title>
+</head>
+<style>
+    body {
+        background-color: #e5e5e6;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h1{
+        color: rgb(39, 39, 39);
+        text-align: center;
+        text-shadow: 0px 0px 10px;
+        font-weight: 100;
+        font-size: 100px;
+    }
+    input{
+        padding:10 ;
+        font-size:20px;
+        width: 200px;
+       
+    }
+    
+    .container{
+        text-align: center;
+        font-size: 20px; 
+        
+
+    }
+</style>
+<body>
+    <h1> calculadora </h1>
+
+    <div class="container">
+    <input type="number" id ="x">
+    <input type="number" id="y"><br>
+    <button type="button" onclick= "soma()">+</button>
+    <button type="button" onclick="sub()">-</button>
+    <button type="button" onclick="mul()">*</button>
+    <button type="button" onclick="div()">/</button> <br>
+    <h2 id = "resultado"> </h2>
+    <button type="reset" onclick="limpar()"> Limpar</button>
+</div>
+    <script>
+        const vetor = Array()
+        function soma (){
+        x = document.getElementById("x").value
+        y = document.getElementById("y").value
+        x = parseFloat(x)
+        y = parseFloat(y)
+        resultado = x+y
+        document.getElementById("resultado").innerHTML = resultado
+        let objeto = {}
+        objeto.operando1=x;
+        objeto.operando2=y;
+        objeto.operacao= "+";
+        objeto.resultado = resultado
+        vetor.push(objeto)
+        }
+        function sub (){
+
+        x = document.getElementById("x").value
+        y = document.getElementById("y").value
+        x = parseFloat(x)
+        y = parseFloat(y)
+        resultado = x-y
+        document.getElementById("resultado").innerHTML = resultado
+        let objeto = {}
+        objeto.operando1=x;
+        objeto.operando2=y;
+        objeto.operacao= "-"
+        objeto.resultado = resultado
+        vetor.push(objeto)
+        }
+        function mul (){
+            x = document.getElementById("x").value
+        y = document.getElementById("y").value
+        x = parseFloat(x)
+        y = parseFloat(y)
+        resultado = x*y
+        document.getElementById("resultado").innerHTML = resultado
+        let objeto = {}
+        objeto.operando1=x;
+        objeto.operando2=y;
+        objeto.operacao= "*"
+        objeto.resultado = resultado
+        vetor.push(objeto)
+        }
+        function div (){
+            x = document.getElementById("x").value
+        y = document.getElementById("y").value
+        x = parseFloat(x)
+        y = parseFloat(y)
+        resultado = x/y
+        document.getElementById("resultado").innerHTML = resultado
+        objeto.operando1=x;
+        objeto.operando2=y;
+        objeto.operacao= "/"
+        objeto.resultado = resultado
+        vetor.push(objeto)
+        }
+        function limpar() {
+            x.value = "";
+            y.value = "";
+            resultado.innerHTML = "";
+        }
+        
+            
+        
+
+
+    </script>
+</body>
+</html>
