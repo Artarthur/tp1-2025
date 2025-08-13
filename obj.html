@@ -43,69 +43,62 @@
     <button type="button" onclick="div()">/</button> <br>
     <h2 id = "resultado"> </h2>
     <button type="reset" onclick="limpar()"> Limpar</button>
+    <ul id="historico">Historico</ul>
 </div>
     <script>
-        const vetor = Array()
+        const objeto = {};
+        function atualizaHistorico(){
+            let historico = document.getElementById('historico');
+            li=document.createElement('li')
+            li.innerHTML = `${objeto.operando1} ${objeto.operacao} ${objeto.operando2} = ${objeto.resultado}`
+            historico.appendChild(li)
+        }
         function soma (){
-        x = document.getElementById("x").value
-        y = document.getElementById("y").value
-        x = parseFloat(x)
-        y = parseFloat(y)
-        resultado = x+y
-        document.getElementById("resultado").innerHTML = resultado
-        let objeto = {}
-        objeto.operando1=x;
-        objeto.operando2=y;
+        objeto.operando1=parseFloat(document.getElementById('x').value);
+        objeto.operando2= parseFloat (document.getElementById('y').value);
         objeto.operacao= "+";
-        objeto.resultado = resultado
-        vetor.push(objeto)
+        objeto.resultado = objeto.operando1 + objeto.operando2
+        document.getElementById("resultado").innerHTML = objeto.resultado
+        document.getElementById('x').value = objeto.resultado
+        document.getElementById('y').value = ''
+        atualizaHistorico()
         }
         function sub (){
 
-        x = document.getElementById("x").value
-        y = document.getElementById("y").value
-        x = parseFloat(x)
-        y = parseFloat(y)
-        resultado = x-y
-        document.getElementById("resultado").innerHTML = resultado
-        let objeto = {}
-        objeto.operando1=x;
-        objeto.operando2=y;
-        objeto.operacao= "-"
-        objeto.resultado = resultado
-        vetor.push(objeto)
+        objeto.operando1=parseFloat(document.getElementById('x').value);
+        objeto.operando2= parseFloat (document.getElementById('y').value);
+        objeto.operacao= "-";
+        objeto.resultado = objeto.operando1 - objeto.operando2
+        document.getElementById("resultado").innerHTML = objeto.resultado
+        document.getElementById('x').value = objeto.resultado
+        document.getElementById('y').value = ''
+        atualizaHistorico()
         }
         function mul (){
-            x = document.getElementById("x").value
-        y = document.getElementById("y").value
-        x = parseFloat(x)
-        y = parseFloat(y)
-        resultado = x*y
-        document.getElementById("resultado").innerHTML = resultado
-        let objeto = {}
-        objeto.operando1=x;
-        objeto.operando2=y;
-        objeto.operacao= "*"
-        objeto.resultado = resultado
-        vetor.push(objeto)
+        objeto.operando1=parseFloat(document.getElementById('x').value);
+        objeto.operando2= parseFloat (document.getElementById('y').value);
+        objeto.operacao= "*";
+        objeto.resultado = objeto.operando1 * objeto.operando2
+        document.getElementById("resultado").innerHTML = objeto.resultado
+        document.getElementById('x').value = objeto.resultado
+        document.getElementById('y').value = ''
+        atualizaHistorico()
         }
         function div (){
-            x = document.getElementById("x").value
-        y = document.getElementById("y").value
-        x = parseFloat(x)
-        y = parseFloat(y)
-        resultado = x/y
-        document.getElementById("resultado").innerHTML = resultado
-        objeto.operando1=x;
-        objeto.operando2=y;
-        objeto.operacao= "/"
-        objeto.resultado = resultado
-        vetor.push(objeto)
+        objeto.operando1=parseFloat(document.getElementById('x').value);
+        objeto.operando2= parseFloat (document.getElementById('y').value);
+        objeto.operacao= "/";
+        objeto.resultado = objeto.operando1 / objeto.operando2
+        document.getElementById("resultado").innerHTML = objeto.resultado
+        document.getElementById('x').value = objeto.resultado
+        document.getElementById('y').value = ''
+        atualizaHistorico()
         }
         function limpar() {
             x.value = "";
             y.value = "";
             resultado.innerHTML = "";
+            document.getElementById('historico').innerHTML = '';
         }
         
             
