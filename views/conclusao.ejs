@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.conteiner{
+        background-color:rgb(6, 76, 182);
+        width: 300px;
+        height: 30px;
+        margin: 10px;
+    }
+    div.alguma{
+        background-color: rgb(6, 76, 182);
+        width: 300px;
+        height: 30px;
+        margin: 10px;
+    }
+    div.macae{
+        background-color: rgb(6, 76, 182);
+        width: 300px;
+        height: 30px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1>resultado da votação</h1>
+    <p class="votos-totais" >total de votos<strong><% = total%></strong></p>
+    <div class="conteiner <%= votos.Quissama >= Math.max(votos.Macae, votos.Carapebus) && votos.Quissama > 0 ? 'vencedor' : '' %>">
+        <h3>quissamã</h3>
+    </div>
+    <div class="alguma <%= votos.Carapebus >= Math.max(votos.Macae, votos.Quissama) && votos.Carapebus > 0 ? 'vencedor' : '' %>"></div>">
+    <h3>Carapebus</h3></div>
+    <div class="macae <%= votos.Macae >= Math.max(votos.Carapebus, votos.Quissama) && votos.macae > 0 ? 'vencedor' : '' %>"></div>
+    <h3>Macaé</h3>
+</div>
+</body>
+</html>
