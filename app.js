@@ -5,7 +5,7 @@ app.set('view engine','ejs');
 const random = (((Math.random()) *100 ) % 100)+1
 
 app.get("/",(res,req)=>{
-res.render(index)
+res.render("index")
 })
 app.get("/sorteio",(res,req)=>{
     if(adivinhe < random){
